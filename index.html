@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>TEST</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="providers-container">
+        <div class="provider">
+          <h3 class="provider-name">backblaze</h3>
+          <img class="provider-logo" src="./images/backblaze-logo.png" alt="" />
+          <div class="provider-price">
+            <div class="provider-price-scale" id="backblaze-price-scale"></div>
+            <span id="backblaze-price-value"></span>
+          </div>
+        </div>
+
+        <div class="provider">
+          <h3 class="provider-name">bunny</h3>
+          <img class="provider-logo" src="./images/bunny-logo.png" alt="" />
+          <div class="radio-wrap">
+            <label class="radio-title">
+              <input type="radio" id="ssd" name="bunny" value="ssd" checked />
+              SSD
+            </label>
+
+            <label class="radio-title">
+              <input type="radio" id="hdd" name="bunny" value="hdd" />
+              HDD
+            </label>
+          </div>
+          <div class="provider-price">
+            <div class="provider-price-scale" id="bunny-price-scale"></div>
+            <span id="bunny-price-value"></span>
+          </div>
+        </div>
+
+        <div class="provider">
+          <h3 class="provider-name">scaleway</h3>
+          <img class="provider-logo" src="./images/scaleway-logo.png" alt="" />
+          <div class="radio-wrap">
+            <label class="radio-title">
+              <input
+                type="radio"
+                id="single"
+                name="scaleway"
+                value="single"
+                checked
+              />
+              SINGLE
+            </label>
+            <label class="radio-title">
+              <input type="radio" id="multi" name="scaleway" value="multi" />
+              MULTI
+            </label>
+          </div>
+          <div class="provider-price">
+            <div class="provider-price-scale" id="scaleway-price-scale"></div>
+            <span id="scaleway-price-value"></span>
+          </div>
+        </div>
+
+        <div class="provider">
+          <h3 class="provider-name">vultr</h3>
+          <img class="provider-logo" src="./images/vultr-logo.png" alt="" />
+          <div class="provider-price">
+            <div class="provider-price-scale" id="vultr-price-scale"></div>
+            <span id="vultr-price-value"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sliders-wrap">
+        <div class="slider-container">
+          <label class="slider-title" for="storage-slider"
+            >Storage:<span class="slider-value" id="storage-value">0</span
+            >GB</label
+          >
+          <input
+            class="slider"
+            id="storage-slider"
+            type="range"
+            min="0"
+            max="1000"
+            step="1"
+            value="0"
+          />
+        </div>
+        <div class="slider-container">
+          <label class="slider-title" for="transfer-slider"
+            >Transfer:
+            <span class="slider-value" id="transfer-value">0</span>GB</label
+          >
+          <input
+            class="slider"
+            id="transfer-slider"
+            type="range"
+            min="0"
+            max="1000"
+            step="1"
+            value="0"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/ingex.js" type="module"></script>
+  </body>
+</html>

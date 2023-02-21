@@ -1,0 +1,254 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.sliders-wrap {
+    width: 100%;
+}
+
+.slider-container {
+    display: flex;
+    width: 280px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.slider-container + .slider-container{
+    margin-top: 25px;
+}
+.slider-value,
+.slider-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #ddd;
+    height: 10px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 25px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 5px;
+    height: 25px;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+.providers-container {
+    display: flex;
+}
+
+.provider {
+    position: relative;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    border-top: 7px solid black;
+}
+
+.provider-name {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.provider-logo {
+    width: 35px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.provider-price {
+    position: absolute;
+    top: -150px;
+    transform: rotate(270deg);
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 8px;
+    background-color: #f1f1f1;
+}
+
+.provider-price-scale {
+    background-color: gray;
+    width: 0;
+    height: 100%;
+}
+
+/* radio button */
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+
+    transform: translateY(-0.075em);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: blue;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+}
+
+.radio-wrap {
+    display: flex;
+    padding: 12px;
+    gap: 4px;
+}
+
+.radio-title {
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+}
+
+/* ********************************** */
+
+/* minCost color */
+#backblaze-price-scale.minCost {
+    background-color: red;
+}
+
+#bunny-price-scale.minCost {
+    background-color: orange;
+}
+
+#scaleway-price-scale.minCost {
+    background-color: blueviolet;
+}
+
+#vultr-price-scale.minCost {
+    background-color: blue;
+}
+
+/* **************************** */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        flex-direction: column-reverse;
+        padding: 15px;
+    }
+.slider-container+.slider-container {
+    margin-top: 0;
+}
+    .sliders-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+.slider-title,
+.slider-value{
+    font-size: 18px;
+}
+    .providers-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .provider {
+        width: 100%;
+        position: relative;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        border-top: none;
+    }
+
+    .provider-logo {
+        width: 50px;
+    }
+
+    .provider-name {
+        width: 100px;
+        font-size: 14px;
+        text-align: start;
+    }
+
+    .provider-price {
+        position: static;
+        top: 0;
+        margin-left: auto;
+        transform: rotate(360deg);
+        display: flex;
+        align-items: center;
+        width: 400px;
+        height: 8px;
+        background-color: #f1f1f1;
+    }
+
+    .provider-price::before {
+        content: "";
+        width: 5px;
+        height: 50px;
+        background-color: black;
+    }
+
+    .radio-title {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+    }
+}
